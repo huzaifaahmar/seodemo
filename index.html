@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water World</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #e0f7fa;
+            color: #01579b;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #00796b;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #004d40;
+            border-radius: 5px;
+        }
+
+        /* Header Section */
+        header {
+            background-image: url('https://www.w3schools.com/w3images/ocean.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px;
+        }
+
+        header h1 {
+            font-size: 60px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 0;
+        }
+
+        header p {
+            font-size: 24px;
+            margin-top: 20px;
+            font-weight: 300;
+        }
+
+        /* Water Ripple Animation */
+        .water-ripple {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgba(0, 150, 136, 0.5);
+            animation: ripple 3s infinite;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(4);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 35px;
+            color: #00796b;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        /* Image with Water Theme */
+        .water-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Animation for fade-in effect */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="water-ripple"></div>
+        <h1>Welcome to Water World</h1>
+        <p>Explore the depths of the oceans and the beauty of water</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Water World</h2>
+        <p>Water World is a vast, breathtaking place that represents the beauty of water in all its forms. From calm lakes to violent oceans, from tropical beaches to icy arctic waters, this world is home to diverse ecosystems and creatures. Join us on a journey to explore these aquatic wonders!</p>
+    </section>
+
+    <!-- Explore Section -->
+    <section id="explore">
+        <h2>Explore Our Water Ecosystems</h2>
+        <div class="fade-in">
+            <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Underwater World" class="water-image">
+        </div>
+        <p>Our world is filled with breathtaking underwater environments. Explore vibrant coral reefs, mysterious deep-sea trenches, and much more. Each ecosystem holds its own secrets waiting to be discovered.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions or want to learn more about Water World? Reach out to us!</p>
+        <p>Email: info@waterworld.com</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Water World. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
